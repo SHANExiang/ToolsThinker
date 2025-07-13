@@ -2,13 +2,12 @@ package main
 
 import (
 	"fyne.io/fyne/v2"
-	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/widget"
-	"github.com/tools-thinker/myTheme"
 	"image/color"
 	"log"
+	"tools-thinker/internal"
 )
 
 //func init() {
@@ -23,12 +22,11 @@ import (
 //	}
 //}
 
-func main() {
-	mainApp := app.New()
-	mainApp.Settings().SetTheme(myTheme.NewMyTheme())
-	w := mainApp.NewWindow("tools-thinker") // 初始化窗口对象
-	w.Resize(fyne.NewSize(800, 600))        // 设置窗口尺寸
+func init() {
+	internal.InitApp()
+}
 
+func main() {
 	// 右侧主内容
 	resource, err := fyne.LoadResourceFromPath("default.jpg")
 	if err != nil {
@@ -65,6 +63,6 @@ func main() {
 		rightContent,
 	)
 
-	w.SetContent(content)
-	w.ShowAndRun()
+	internal.Window.SetContent(content)
+	internal.Window.ShowAndRun()
 }

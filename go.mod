@@ -1,4 +1,4 @@
-module github.com/tools-thinker
+module tools-thinker
 
 go 1.21.10
 
