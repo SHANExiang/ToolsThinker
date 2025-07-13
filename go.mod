@@ -1,11 +1,8 @@
-module github.com/ToolsThinker
+module github.com/tools-thinker
 
 go 1.21.10
 
-require (
-	fyne.io/fyne/v2 v2.6.1
-	github.com/flopp/go-findfont v0.1.0
-)
+require fyne.io/fyne/v2 v2.6.1
 
 require (
 	fyne.io/systray v1.11.0 // indirect

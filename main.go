@@ -6,7 +6,7 @@ import (
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/widget"
-	"github.com/ToolsThinker/myTheme"
+	"github.com/tools-thinker/myTheme"
 	"image/color"
 	"log"
 )
@@ -26,8 +26,8 @@ import (
 func main() {
 	mainApp := app.New()
 	mainApp.Settings().SetTheme(myTheme.NewMyTheme())
-	w := mainApp.NewWindow("ToolsThinker") // 初始化窗口对象
-	w.Resize(fyne.NewSize(800, 600))       // 设置窗口尺寸
+	w := mainApp.NewWindow("tools-thinker") // 初始化窗口对象
+	w.Resize(fyne.NewSize(800, 600))        // 设置窗口尺寸
 
 	// 右侧主内容
 	resource, err := fyne.LoadResourceFromPath("default.jpg")
