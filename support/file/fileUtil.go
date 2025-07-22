@@ -13,7 +13,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"support/logger"
+	"tools-thinker/support/logger"
 
 	"github.com/pkg/errors"
 )
