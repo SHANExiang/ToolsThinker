@@ -13,11 +13,11 @@ import (
 
 var Content *fyne.Container
 
-func Init() {
+func Init(window fyne.Window) {
 	Content = container.NewVBox(
 		widget.NewLabel("📋 Menu"),
 		widget.NewButton("Excel", func() {
-			excel.Content()
+			excel.Content(window)
 		}),
 		widget.NewButton("Word", func() {
 			//newContent := canvas.NewText("你打开了word", color.RGBA{0, 0, 255, 255})

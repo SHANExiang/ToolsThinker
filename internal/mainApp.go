@@ -12,13 +12,15 @@ import (
 var App fyne.App
 var Window fyne.Window
 
-func InitApp() {
-	App = app.New()
-	App.Settings().SetTheme(myTheme.NewMyTheme())
-	Window = App.NewWindow("tools-thinker") // 初始化窗口对象
+const AppName = "tools-thinker"
 
-	left.Init()  // 左侧区域初始化
-	right.Init() // 右侧区域初始化
+func InitApp() {
+	App = app.NewWithID(AppName)
+	App.Settings().SetTheme(myTheme.NewMyTheme())
+	Window = App.NewWindow(AppName) // 初始化窗口对象
+
+	left.Init(Window)  // 左侧区域初始化
+	right.Init(Window) // 右侧区域初始化
 
 	// ----- Main layout: Left menu + Right panel -----
 	mainLayout := container.NewHSplit(

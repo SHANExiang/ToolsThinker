@@ -14,7 +14,7 @@ var Content *container.Split
 var PrintLog func(string)
 var RefreshContent *fyne.Container
 
-func Init() {
+func Init(window fyne.Window) {
 	// 右侧主内容
 	//resource, err := fyne.LoadResourceFromPath("default.jpg")
 	//if err != nil {
